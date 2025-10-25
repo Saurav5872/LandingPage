@@ -1,0 +1,88 @@
+.about-us-section {
+  background: linear-gradient(135deg, #fff7f3 0%, #ffe7cf 100%);
+  position: relative;
+  overflow: hidden;
+  color: #222;
+}
+
+/* Gradient Heading */
+/* .gradient-text {
+  background: linear-gradient(90deg, #000); 
+ 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+/* Orange subheading */
+.text-orange {
+  color: #ff7300;
+}
+
+/* Text fade-in animation */
+.fade-in-text {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button styling */
+.btn-orange {
+  background: linear-gradient(90deg, #ff7300, #ff9b42);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-orange:hover {
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.7);
+  transform: translateY(-3px);
+}
+
+/* Image animation */
+.image-wrapper img {
+  max-width: 90%;
+  border-radius: 20px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* Floating effect for image */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Text list */
+.about-us-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.about-us-section li {
+  margin-bottom: 10px;
+}

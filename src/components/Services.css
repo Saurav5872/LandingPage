@@ -1,0 +1,81 @@
+.services-section {
+  background: linear-gradient(135deg, #fff8f1 0%, #fff3e0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient heading */
+/* .gradient-text {
+  background: linear-gradient(90deg, #ff7300, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+/* Orange color for subheading */
+.text-orange {
+  color: #ff7300;
+}
+
+/* Service card */
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(255, 115, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card hover animation */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 115, 0, 0.25);
+}
+
+/* Icon */
+.icon-wrapper {
+  font-size: 2.8rem;
+  color: #ff7300;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* Icon animation on hover */
+.service-card:hover .icon-wrapper {
+  transform: scale(1.2) rotate(8deg);
+  color: #000;
+}
+
+/* Text styles */
+.service-card h5 {
+  font-weight: 600;
+  color: #222;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Floating background glow */
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255,115,0,0.4) 0%, transparent 70%);
+  filter: blur(70px);
+}
+
+.services-section::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255,140,0,0.4) 0%, transparent 70%);
+  filter: blur(70px);
+}

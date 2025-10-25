@@ -1,0 +1,54 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  background-color:  #130d4e;
+}
+
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.footer h5::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #ff5722;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.footer h5:hover::after {
+  width: 100%;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+  color: #ff5722;
+  transform: translateX(5px);
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #ff5722;
+  transform: scale(1.2);
+}
+
+.footer hr {
+  border-top: 1px solid #555;
+}

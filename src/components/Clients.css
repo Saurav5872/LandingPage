@@ -1,0 +1,151 @@
+/* === Clients Section === */
+.clients-section {
+  background: linear-gradient(120deg, #f8faff, #eef1f8);
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating glow blobs */
+.clients-section::before,
+.clients-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  z-index: 0;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.clients-section::before {
+  background: #ff6600;
+  top: -100px;
+  left: -80px;
+}
+
+.clients-section::after {
+  background: #ffaa00;
+  bottom: -100px;
+  right: -80px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+/* Title */
+.clients-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+  animation: fadeDown 1s ease;
+}
+
+.clients-subtitle {
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 60px;
+  font-size: 1rem;
+  animation: fadeIn 1.2s ease;
+}
+
+/* === Logo Slider === */
+.clients-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 12);
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* === Each Logo === */
+.client-logo {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.client-logo:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 136, 0, 0.3);
+}
+
+.client-logo img {
+  max-height: 60px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* === Animations === */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .clients-title {
+    font-size: 2rem;
+  }
+
+  .client-logo {
+    width: 150px;
+    height: 80px;
+    margin: 0 15px;
+  }
+
+  .slider-track {
+    width: calc(180px * 12);
+  }
+}
